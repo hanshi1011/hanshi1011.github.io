@@ -3,16 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>12 | 个人博客</title>
+  <title>ES6 | 个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords">
+  <meta name="description" content="ES6：ES6 不是什么新语言，也不是新框架，它就是原生 JS， 只不过是升过级的JS的一些写法。">
+<meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="12">
-<meta property="og:url" content="http://yoursite.com/2017/04/24/12/index.html">
+<meta property="og:title" content="ES6">
+<meta property="og:url" content="http://yoursite.com/2017/03/25/ES6/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:updated_time" content="2017-04-24T07:29:53.943Z">
+<meta property="og:description" content="ES6：ES6 不是什么新语言，也不是新框架，它就是原生 JS， 只不过是升过级的JS的一些写法。">
+<meta property="og:updated_time" content="2017-03-25T10:26:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="12">
+<meta name="twitter:title" content="ES6">
+<meta name="twitter:description" content="ES6：ES6 不是什么新语言，也不是新框架，它就是原生 JS， 只不过是升过级的JS的一些写法。">
   
     <link rel="alternative" href="/atom.xml" title="个人博客" type="application/atom+xml">
   
@@ -226,11 +229,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-12" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-ES6" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/04/24/12/" class="article-date">
-      <time datetime="2017-04-24T07:29:53.000Z" itemprop="datePublished">2017-04-24</time>
+      <a href="/2017/03/25/ES6/" class="article-date">
+      <time datetime="2017-03-25T10:25:13.000Z" itemprop="datePublished">2017-03-25</time>
 </a>
     </div>
   
@@ -243,7 +246,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      12
+      ES6
     </h1>
   
 
@@ -260,7 +263,133 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        
+        <h1 id="ES6："><a href="#ES6：" class="headerlink" title="ES6："></a>ES6：</h1><pre><code>ES6 不是什么新语言，也不是新框架，它就是原生 JS，
+只不过是升过级的JS的一些写法。
+</code></pre><a id="more"></a>
+<p>###1.let：定义变量<br>        特点：<br>            1）支持块作用域<br>            2）不允许在相同作用域重复定义<br>        块作用域：<br>            {}      let<br>            以前： 函数作用域</p>
+<h3 id="2-const-定义常量"><a href="#2-const-定义常量" class="headerlink" title="2.const: 定义常量"></a>2.const: 定义常量</h3><pre><code>常量： 一经定义，以后不可以再改变
+正是因为这个特性，要求常量在定义时，必须赋初始值，否则以后就没机会了。
+通常：约定，常量的名字全用大写字母
+const PI = 3.14159265;
+</code></pre><h3 id="3-字符串"><a href="#3-字符串" class="headerlink" title="3.字符串"></a>3.字符串</h3><pre><code>let str = ``;  //反单引号
+使用``来定义字符串的话，就可以用字符串模板： ${变量}
+</code></pre><h3 id="4-解构赋值"><a href="#4-解构赋值" class="headerlink" title="4.解构赋值"></a>4.解构赋值</h3><pre><code>//写法1： √
+    var a = 10;
+    var b = 12;
+    var c = 20;
+//写法2： √
+var a=10,b=12,c=20;
+概念：赋值等号 左边的结构和右边一模一样。
+[a,b,c] = [10,12,20]; //a = 10,b=12,c=20        
+[a,[b,e],c] = [100,[200,300],400];
+[a,{f,g},d]=[12,{90,98},4]  ×
+[a,{f,g},d]=[12,{f:90,g:98},4]   √
+let [a,{f,g},d]=[12,{f=90,g=98},4];   ×
+如果在解构赋值时，碰到json格式，那么右边必须是一个合法的json
+并且，json中的每一项名字是一一对应的，和顺序无关
+应用1：
+    用于函数的json参数初始化
+    function sum({a=0,b=0} = {}){
+        a++;
+        b++;
+        return a+b;
+    }
+</code></pre><h3 id="5-不定参数、扩展参数-…"><a href="#5-不定参数、扩展参数-…" class="headerlink" title="5.不定参数、扩展参数  …"></a>5.不定参数、扩展参数  …</h3><pre><code>原来：arguments
+现在： ...
+...args  是一个真正的数组。
+
+例1：代替arguments
+    function sum(...args)
+例2：扩展参数的作用
+    function sum(a,b,...agrs){
+        //args   除了a和b之外，其它参数的一个数组
+    }
+    ****...args  必须放在所有参数的最后
+例3：复制数组
+    1）循环每一项来复制
+    2）var arr2 = [...arr1];  不是引用
+    3）Array.from(arr1)  //不兼容IE  不是引用
+</code></pre><h3 id="6-for-of-循环"><a href="#6-for-of-循环" class="headerlink" title="6.for - of 循环"></a>6.for - of 循环</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">for</div><div class="line">while</div><div class="line">for...in</div><div class="line">for(var name of 要循环的东西)&#123;</div><div class="line">	</div><div class="line">&#125;</div><div class="line">要循环的东西，可以是数组，但是不能是json</div><div class="line">for-of循环，  不能用于循环json</div></pre></td></tr></table></figure>
+<h3 id="7、数据格式-map"><a href="#7、数据格式-map" class="headerlink" title="7、数据格式   map"></a>7、数据格式   map</h3><pre><code>    数据格式：
+        1）普通变量  var a = 12;
+        2）数组     var arr = [11,22];
+        3）JSON   var json = {name:1,age:2};
+        4）map
+    map: 和json非常像 的一种新的数据格式(键/值 对) 
+    1） 怎么弄一个map出来
+            map 是js中的一个对象 
+        var map = new Map();
+    2） 增加内容
+        map.set(&apos;key&apos;,&apos;value&apos;);
+            例：  
+                var map = new Map();
+                map.set(&apos;name&apos;,&apos;小红&apos;);
+                map.set(&apos;age&apos;,18);
+    3）获取内容    
+        map.get(&apos;key&apos;);
+        例：  
+            //建一个新对象
+            var map = new Map();
+            //设置值
+            map.set(&apos;name&apos;,&apos;小红&apos;);
+            map.set(&apos;age&apos;,18);
+            //获取值
+            map.get(&apos;name&apos;); -- 小红
+    4）删除一项
+        map.delete(&apos;key&apos;);
+用for-of循环，来循环map
+    1） 普通循环
+        for(var item of map){
+            item -&gt; 数组 
+                item[0]是map中的key
+                item[1] -&gt; map中的value
+        }
+    2）利用解构赋值的形式
+        for(var [key,value] of map ){
+              alert(key);
+              alert(value);
+        }
+    3）循环map 的 entries()
+    for(let item of map.entries())
+
+    *默认情况下就是循环的entries，也就是说，如果不写entries()，结果是一样的
+
+    4）只想循环map中的key
+        for(var item of map.keys() )
+         只想循环map中的value
+        for(var item of map.values())
+    for-of循环数组 ：  entries()   keys()  values()
+        entries():
+        item -&gt;  [索引,值]
+        keys():
+        item -&gt;  索引
+
+    values():  
+        item -&gt;  值
+循环map对象时：
+    map.entries()
+    map
+    以上两种写法是一个效果，得到的都是map对象的每一个item，包括key和value，是一个数组形式
+循环数组：
+    arr.entries()
+    得到的是数组中每一项：  [索引值,值]
+    arr.values()  ——  报错，不支持
+arr.keys() —— 得到的就是数组的索引值
+</code></pre><h3 id="8-函数"><a href="#8-函数" class="headerlink" title="8.函数"></a>8.函数</h3><pre><code>原来：
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function show()&#123;...&#125;</div><div class="line">var show = new Function();</div><div class="line">show(); </div><div class="line">show(a);</div><div class="line">show(a,b);</div></pre></td></tr></table></figure>
+<pre><code>现在：
+    箭头函数：  =&gt;
+    省略了function，加了一个箭头=&gt;
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">1:</div><div class="line">	function show()&#123;</div><div class="line">		alert(1);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	let show = () =&gt; &#123;</div><div class="line">		alert(1);</div><div class="line">	&#125;;</div><div class="line">2:</div><div class="line">	function show(a)&#123;alert(a);&#125;</div><div class="line">	</div><div class="line">	let show = (a)=&gt;&#123;</div><div class="line">		alert(a);</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<pre><code>  箭头函数，只是在函数定义时，写法有区别，在调用的时候，和原来一样。
+
+
+*箭头函数里的this，固定化 自己没有去外边找  最大this是window
+*箭头函数里arguments不能用了
+*当参数正好有一个的时候，( ) 可以省略
+*当函数里面只有一句话，而且正好是return的时候，{ }和里面的return 可以省略
+</code></pre><h3 id="9-JSON-有了简写形式"><a href="#9-JSON-有了简写形式" class="headerlink" title="9.JSON 有了简写形式"></a>9.JSON 有了简写形式</h3><pre><code>当json中的name和变量名一模一样时，可以简写为以下形式：
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">	var a = 12;</div><div class="line">	var b = 18;</div><div class="line">var json = &#123;a:a,b:2&#125;;</div><div class="line">	json.a -&gt; 12</div><div class="line">	json.b -&gt; 18</div><div class="line">	var a = 12;</div><div class="line">	var b = 18;</div><div class="line">var json = &#123;a,b&#125;;</div></pre></td></tr></table></figure>
       
       
         <div class="page-reward">
@@ -314,13 +443,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/04/24/12/">12</a></p>
+        <p><span>本文标题:</span><a href="/2017/03/25/ES6/">ES6</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 ₯㎕。Smile° 的个人博客">₯㎕。Smile°</a></p>
-        <p><span>发布时间:</span>2017年04月24日 - 15时29分</p>
-        <p><span>最后更新:</span>2017年04月24日 - 15时29分</p>
+        <p><span>发布时间:</span>2017年03月25日 - 18时25分</p>
+        <p><span>最后更新:</span>2017年03月25日 - 18时26分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/04/24/12/" title="12">http://yoursite.com/2017/04/24/12/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/04/24/12/　　作者: ₯㎕。Smile°" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/03/25/ES6/" title="ES6">http://yoursite.com/2017/03/25/ES6/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/03/25/ES6/　　作者: ₯㎕。Smile°" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -333,18 +462,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2017/04/23/photo/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/03/21/HTML-CSS/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          photo
+          HTML/CSS
         
       </div>
     </a>
   
   
-    <a href="/2017/04/24/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2017/03/31/angular/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">angular</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -355,7 +484,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ES6："><span class="toc-number">1.</span> <span class="toc-text">ES6：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-const-定义常量"><span class="toc-number">1.0.1.</span> <span class="toc-text">2.const: 定义常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-字符串"><span class="toc-number">1.0.2.</span> <span class="toc-text">3.字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-解构赋值"><span class="toc-number">1.0.3.</span> <span class="toc-text">4.解构赋值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-不定参数、扩展参数-…"><span class="toc-number">1.0.4.</span> <span class="toc-text">5.不定参数、扩展参数  …</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-for-of-循环"><span class="toc-number">1.0.5.</span> <span class="toc-text">6.for - of 循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、数据格式-map"><span class="toc-number">1.0.6.</span> <span class="toc-text">7、数据格式   map</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-函数"><span class="toc-number">1.0.7.</span> <span class="toc-text">8.函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-JSON-有了简写形式"><span class="toc-number">1.0.8.</span> <span class="toc-text">9.JSON 有了简写形式</span></a></li></ol></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -403,7 +532,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2017/04/24/12/" data-title="12" data-url="http://yoursite.com/2017/04/24/12/"></div>
+    <div class="ds-thread" data-thread-key="2017/03/25/ES6/" data-title="ES6" data-url="http://yoursite.com/2017/03/25/ES6/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -426,13 +555,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/04/23/photo/" title="上一篇: photo">
+            <a href="/2017/03/21/HTML-CSS/" title="上一篇: HTML/CSS">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2017/04/24/hello-world/" title="下一篇: Hello World">
+            <a href="/2017/03/31/angular/" title="下一篇: angular">
                 <i class="fa fa-angle-right"></i>
             </a>
         

@@ -3,16 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>12 | 个人博客</title>
+  <title>HTML/CSS | 个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords">
+  <meta name="description" content="一、标签分类：        1.行内标签：         span,a,i,em,b,strong,         1)共处一行         2)不支持宽高         3)受空格和回车影响     2.块元素         p,div,h1-h6,ul,ol,dl,li,dt,dd         1)独占一行         2)支持宽高         3)不受空格和回车影响">
+<meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="12">
-<meta property="og:url" content="http://yoursite.com/2017/04/24/12/index.html">
+<meta property="og:title" content="HTML/CSS">
+<meta property="og:url" content="http://yoursite.com/2017/03/21/HTML-CSS/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:updated_time" content="2017-04-24T07:29:53.943Z">
+<meta property="og:description" content="一、标签分类：        1.行内标签：         span,a,i,em,b,strong,         1)共处一行         2)不支持宽高         3)受空格和回车影响     2.块元素         p,div,h1-h6,ul,ol,dl,li,dt,dd         1)独占一行         2)支持宽高         3)不受空格和回车影响">
+<meta property="og:updated_time" content="2017-03-21T13:57:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="12">
+<meta name="twitter:title" content="HTML/CSS">
+<meta name="twitter:description" content="一、标签分类：        1.行内标签：         span,a,i,em,b,strong,         1)共处一行         2)不支持宽高         3)受空格和回车影响     2.块元素         p,div,h1-h6,ul,ol,dl,li,dt,dd         1)独占一行         2)支持宽高         3)不受空格和回车影响">
   
     <link rel="alternative" href="/atom.xml" title="个人博客" type="application/atom+xml">
   
@@ -226,11 +229,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-12" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-HTML-CSS" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/04/24/12/" class="article-date">
-      <time datetime="2017-04-24T07:29:53.000Z" itemprop="datePublished">2017-04-24</time>
+      <a href="/2017/03/21/HTML-CSS/" class="article-date">
+      <time datetime="2017-03-21T13:57:04.000Z" itemprop="datePublished">2017-03-21</time>
 </a>
     </div>
   
@@ -243,7 +246,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      12
+      HTML/CSS
     </h1>
   
 
@@ -260,7 +263,330 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        
+        <h3 id="一、标签分类："><a href="#一、标签分类：" class="headerlink" title="一、标签分类："></a>一、标签分类：</h3><hr>
+<pre><code>       1.行内标签：
+        span,a,i,em,b,strong,
+        1)共处一行
+        2)不支持宽高
+        3)受空格和回车影响
+    2.块元素
+        p,div,h1-h6,ul,ol,dl,li,dt,dd
+        1)独占一行
+        2)支持宽高
+        3)不受空格和回车影响
+    3.行内块
+        img,input
+        1)共处一行
+        2)支持宽高
+        3)受空格和回车影响
+元素转换：
+    1)行内元素转成块元素    display:block;
+    2)块元素转成行内元素    display:inline;(尽量不用)
+    3)转行内块            display:inline-block;
+书写规范：
+    1)双标签必须闭合
+    2)单标签合理闭合(/)
+    3)合理嵌套和缩进
+        a.块元素可以包块和行内(p只能包行内，不能包块)
+        b.行内元素可以包行内(不要包自己)*(a可以包块,一般把a转化成块)*
+    4)所有字母都小写
+</code></pre><a id="more"></a>
+<h3 id="二、样式："><a href="#二、样式：" class="headerlink" title="二、样式："></a>二、样式：</h3><hr>
+<pre><code>    1)行内        &lt;div style=&quot;&quot;&gt;&lt;/div&gt;
+    2)内联样式    &lt;style&gt;&lt;/style&gt;
+    3)外联样式    &lt;link href=&quot;&quot; rel=&quot;stylesheet&quot;
+常见样式：width,height,border
+border:(重点)
+    1)合写：border:1px solid red;
+    2)分写：border-width:粗细
+            border-style:solid/dashed/dotted
+            border-color:颜色
+        border-top:上
+        border-right:右
+        border-bottom:下
+        border-left:左
+颜色表示法：
+    1)单词    red/blue/pink/yellow/green/black/gray
+    2)十六进制 a-f 0-9 
+            #000000;  #000; (缩写)
+    3)rgb(0-255,0-255,0-255)
+</code></pre><h3 id="三、背景样式"><a href="#三、背景样式" class="headerlink" title="三、背景样式"></a>三、背景样式</h3><hr>
+<pre><code>    background
+        分写：background-color:
+              background-image:url();
+              background-repeat:no-repeat/repeat-x/repeat-y
+              background-position:
+                  1)百分比
+                  2)像素 x轴 y轴
+                  3)单词 left/right/center/top/bottom
+                  4)混合 区分顺序
+        合写：background:url() no-repeat 0 0 #ccc;
+文字相关样式：
+    font-size:字体大小
+    font-family:字体类型  Microsoft Yahei
+    font-weight:bold/normal;字体加粗/不加粗
+    font-style:italic/normal;字体倾斜/不倾斜
+    color:颜色
+    合写：font: bold italic 30px/60px &apos;宋体&apos;；
+文本水平对齐方式：
+    text-align:center/left/right;
+    行高：line-height:height;
+    text-decoration:overline/line-through/underline/none;
+em单位
+    1)text-indent:2em;
+    2)text-indent:-999; 隐藏logo上文字
+    3)限制一行几个字符
+文字不折行
+    white-space:nowrap;    不折行
+    overflow:hidden;    溢出隐藏
+    text-overflow:ellipsis;    省略号
+</code></pre><h3 id="四、盒子模型"><a href="#四、盒子模型" class="headerlink" title="四、盒子模型"></a>四、盒子模型</h3><hr>
+<pre><code>    宽：width+padding*2+border*2
+    高: height+padding*2+border*2
+padding:
+    1个值    上下左右
+    2个值    上下 左右
+    3个值    上 左右 下
+    4个值    上右下左
+方向:
+    padding-left/right/top/bottom;
+margin(同上)
+margin负值-----热门单击游戏
+关于margin：
+    1)拖拽
+        解决：
+            给父级加overflow:hidden;
+            给父级加border;
+            给父级加padding；
+    2)塌陷    取得是margin-bottom或margin-top的最大值
+</code></pre><h3 id="五、清除浏览器默认样式"><a href="#五、清除浏览器默认样式" class="headerlink" title="五、清除浏览器默认样式"></a>五、清除浏览器默认样式</h3><hr>
+<pre><code>*{padding:0; margin:0; font-size:12px;}
+ul,ol,li,dl,dt,dd{ padding:0; margin:0;}
+li{ list-style:none;}
+h1,h2,h3,h4,h5,h6{ font-weight:normal;}
+a{ text-decoration:none; color:#000;}
+i,em{ font-style:normal;}
+b,strong{ font-weight:normal;}
+.clearfix:after{ display:block; content:&apos;&apos;; clear:both;}
+.clearfix{zoom:1;}
+.fl{ float:left;}
+.fr{ float:right;}
+img{display:block;}或者img{vertical-align:top;}
+a img{ border:none;}
+input,textarea{outline:none;}
+table{ border-collapse:collapse;}
+th,td{ border:1px solid #ccc; padding:0;}
+</code></pre><h3 id="六、属性："><a href="#六、属性：" class="headerlink" title="六、属性："></a>六、属性：</h3><hr>
+<pre><code>1)共有属性
+    title    鼠标移入时右下角显示
+2)私有属性
+    a
+        href=&quot;&quot;
+    img
+        src=&quot;&quot;
+        width=&quot;&quot;
+        height=&quot;&quot;
+        border=&quot;&quot;
+        alt=&quot;&quot;    挂了
+</code></pre><h3 id="七、选择器："><a href="#七、选择器：" class="headerlink" title="七、选择器："></a>七、选择器：</h3><hr>
+<pre><code>1)p{}
+2).class{}
+3)#box{}
+4)*{}
+优先级 *&lt;标签&lt;.class&lt;#box&lt;行内
+5)群组 div,p,.box{}
+6)嵌套 .box p{}
+7)筛选 p.box{}
+8)伪类
+    a:link{}  默认
+    a:visited{} 访问之后
+    a:hover{} 鼠标悬停
+    a:active{} 按下
+</code></pre><h3 id="八、浮动"><a href="#八、浮动" class="headerlink" title="八、浮动:"></a>八、浮动:</h3><hr>
+<pre><code>float:left/right;
+    作用：
+    放在一行
+特点：
+    1)脱离文档流(半脱离)
+    2)改变元素类型，使其支持宽高
+    3)顶对齐
+    4)文本环绕
+三要素(重点)
+    1)给父级清浮动
+    2)同级浮动，其他也要浮动
+    3)浮动元素尽量设置宽高
+清除浮动：
+    1)overflow:hidden;
+    2)在浮动元素后边加一个空的块元素
+        &lt;div style=&quot;clear:both&quot;&gt;&lt;/div&gt;
+    3).clearfix:after{display:block; content:&apos;&apos;; clear:both;}
+       .clearfix{zoom:1;}
+</code></pre><h3 id="九、定位："><a href="#九、定位：" class="headerlink" title="九、定位："></a>九、定位：</h3><hr>
+<pre><code>1.绝对定位
+    position:absolute; left:0; right:0;
+    特点：
+        1)完全脱离文档流
+        2)改变元素类型支持宽高
+    参照物：
+        1)当父级没有定位的时候，参照物是body
+        2)当父级有定位的时候，参照物是父级
+2.相对定位
+    position:relative;
+    特点：
+        1)不脱离文档流
+        2)不改变元素类型
+    参照物：
+        本身原来的位置---自己
+3.固定定位
+    position:fixed;
+    特点:
+        1)完全脱离文档流
+        2)改变元素类型，支持宽高
+    参照物：
+        屏幕可视区
+层级：
+    z-index:999;
+    普通元素&lt;浮动元素&lt;定位元素&lt;定位+z-index;
+    *z-index 只能应用在定位元素上
+    *父级的层级永远不会发生变化
+让一个已知宽高的div垂直水平居中
+    div{
+        width:300px;
+        height:300px;
+        position:absolute;
+        left:50%;
+        top:50%;
+        margin-left:-150px;
+        margin-top:-150px;
+    }
+让一个图片在块里面垂直水平居中
+    &lt;div&gt;
+        &lt;img src=&quot;&quot; /&gt;
+        &lt;span&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    div{
+        width:300px;
+        height:500px;
+        border:1px solid red;
+        text-align:center;
+    }
+    img{
+        vertical-align:middle;
+    }
+    span{
+        display:inline-block;
+        vertical-align:middle;
+        height:100%;
+    }
+雪碧图/精灵图/图片拼接技术
+</code></pre><h3 id="十、透明层"><a href="#十、透明层" class="headerlink" title="十、透明层"></a>十、透明层</h3><hr>
+<pre><code>opacity:0.3;                0-1;
+filter:alpha(opacity:30);    0-100
+*必须写兼容 filter:---
+*透明层非常强悍，可以把里面的东西全部变透明
+</code></pre><h3 id="十一、常见兼容"><a href="#十一、常见兼容" class="headerlink" title="十一、常见兼容"></a>十一、常见兼容</h3><hr>
+<pre><code> 1.行高
+     解决：line-height:100%;或者line-height:字体大小；
+ 2.双边距
+     浮动的方向和margin的方向一致时
+     解决：
+         给浮动元素加display:inline;
+ 3.img 3像素bug
+     解决：
+         display:block;/vertical-align:top;
+ 4.透明层
+     filter:alpha(opacity:40);
+ 5.a img IE 下出现蓝色边框
+     解决：
+         a img{border:0;}
+6.margin负值 改变元素位置多余的在IE下不显示
+ 解决：给它加 position:relative;
+</code></pre><h3 id="十二、表单"><a href="#十二、表单" class="headerlink" title="十二、表单"></a>十二、表单</h3><hr>
+<pre><code>    &lt;form action=&quot;地址&quot; method=&quot;get/post&quot;&gt;
+        &lt;input type=&quot;text&quot; value=&quot;&quot; name=&quot;&quot; /&gt;
+        &lt;input type=&quot;password&quot; name=&quot;&quot; value=&quot;&quot; /&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;&quot; value=&quot;&quot; id=&quot;&quot; /&gt;
+        &lt;label for=&quot;&quot;&gt;&lt;/label&gt;
+        &lt;input type=&quot;checkbox&quot; name=&quot;&quot; value=&quot;&quot; /&gt;
+        &lt;select name=&quot;&quot;&gt;
+            &lt;option value=&quot;&quot;&gt;&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;input type=&quot;file&quot; /&gt;
+        &lt;input type=&quot;button&quot; /&gt;
+        &lt;input type=&quot;submit&quot; /&gt;
+        &lt;input type=&quot;reset&quot; /&gt;
+        &lt;textarea&gt;&lt;/textarea&gt;
+    &lt;/form&gt;
+&lt;form action=&quot;模拟百度.html&quot; method=&quot;get&quot;&gt;&lt;/form&gt;
+action    数据提交的地址
+method    提交的方式
+get    地址栏    不安全
+post    后台    相对安全一点
+&lt;input type=&quot;password&quot; name=&quot;num&quot;/&gt;     （密文输入框）密码框
+&lt;input type=&quot;text&quot; name=&quot;num&quot;/&gt;   文本框
+name---------想提交必须给它一个名字
+&lt;input type=&quot;radio&quot; name=&quot;sex&quot; id=&quot;id&quot;/&gt;单选框
+*（用相同的name才可以单选）
+&lt;label for=&quot;nv&quot;&gt;女&lt;/label&gt;
+for=&quot;ID&quot;文字可以选择
+&lt;select&gt;下拉框
+    &lt;option&gt;下拉框内容&lt;/option&gt;
+&lt;/select&gt;
+input         输入框                 &lt;input type=&quot;&quot; /&gt;
+type         类型
+radio         单选                 &lt;input type=&quot;radio&quot; /&gt;
+checkbox     多选                 &lt;input type=&quot;checkbox&quot; /&gt;
+text         文本                 &lt;input type=&quot;text&quot; /&gt;
+    textarea                   文本域                                                       &lt;textarea&gt;&lt;/textarea&gt;
+password     密码                 &lt;input type=&quot;password&quot; /&gt;
+submit         提交                 &lt;input type=&quot;submit&quot; /&gt;
+button         按钮                 &lt;input type=&quot;button&quot; /&gt;
+reset         重置                 &lt;input type=&quot;reset&quot; /&gt;
+vertical-align:    垂直对齐方式
+middle;        居中
+top；        上边
+bottom        下边            
+outline:none;    取消焦点(取消表单边框)
+resize:none;    取消文本域拖拽
+    *清除默认样式
+        input,textarea{outline:none;}
+        textarea{resize:none;}
+    *单选、多选、下拉框不要设置样式
+</code></pre><h3 id="十三、表格"><a href="#十三、表格" class="headerlink" title="十三、表格"></a>十三、表格</h3><hr>
+<pre><code>&lt;table&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th&gt;&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+table{ border-collapse:collapse;}
+th,td{ border:1px solid #ccc; padding:0;}
+align=&quot;left/center/right&quot;
+valign=&quot;top/middle/bottom&quot;
+colspan=&quot;&quot; 合并列
+rowspan=&quot;&quot; 合并行
+</code></pre><h3 id="十四、框架、框架集"><a href="#十四、框架、框架集" class="headerlink" title="十四、框架、框架集"></a>十四、框架、框架集</h3><hr>
+<pre><code>&lt;iframe src=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;frameset row=&quot;200px,*,200px&quot;&gt;
+    &lt;frame /&gt;
+&lt;/frameset&gt;
+row=&quot;&quot; col=&quot;&quot;
+frameborder=&quot;0&quot;
+scrolling=&quot;&quot;
+*出现框架集的时候要把body干掉
+锚点：
+    1.跳转到同一个页面对应的位置
+        跳转&lt;a href=&quot;#box&quot;&gt;&lt;/a&gt;
+        内容&lt;div id=&quot;box&quot;&gt;&lt;/div&gt;
+    2.跳转不同页面的对应位置
+        跳转&lt;a href=&quot;index.html#box&quot;&gt;&lt;/a&gt;
+        内容&lt;div id=&quot;box&quot;&gt;&lt;/div&gt;
+</code></pre>
       
       
         <div class="page-reward">
@@ -314,13 +640,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/04/24/12/">12</a></p>
+        <p><span>本文标题:</span><a href="/2017/03/21/HTML-CSS/">HTML/CSS</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 ₯㎕。Smile° 的个人博客">₯㎕。Smile°</a></p>
-        <p><span>发布时间:</span>2017年04月24日 - 15时29分</p>
-        <p><span>最后更新:</span>2017年04月24日 - 15时29分</p>
+        <p><span>发布时间:</span>2017年03月21日 - 21时57分</p>
+        <p><span>最后更新:</span>2017年03月21日 - 21时57分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/04/24/12/" title="12">http://yoursite.com/2017/04/24/12/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/04/24/12/　　作者: ₯㎕。Smile°" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/03/21/HTML-CSS/" title="HTML/CSS">http://yoursite.com/2017/03/21/HTML-CSS/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/03/21/HTML-CSS/　　作者: ₯㎕。Smile°" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -333,18 +659,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2017/04/23/photo/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/03/21/javascript5/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          photo
+          javascript5
         
       </div>
     </a>
   
   
-    <a href="/2017/04/24/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2017/03/25/ES6/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ES6</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -355,7 +681,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、标签分类："><span class="toc-number">1.</span> <span class="toc-text">一、标签分类：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、样式："><span class="toc-number">2.</span> <span class="toc-text">二、样式：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、背景样式"><span class="toc-number">3.</span> <span class="toc-text">三、背景样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、盒子模型"><span class="toc-number">4.</span> <span class="toc-text">四、盒子模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五、清除浏览器默认样式"><span class="toc-number">5.</span> <span class="toc-text">五、清除浏览器默认样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#六、属性："><span class="toc-number">6.</span> <span class="toc-text">六、属性：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#七、选择器："><span class="toc-number">7.</span> <span class="toc-text">七、选择器：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#八、浮动"><span class="toc-number">8.</span> <span class="toc-text">八、浮动:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#九、定位："><span class="toc-number">9.</span> <span class="toc-text">九、定位：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十、透明层"><span class="toc-number">10.</span> <span class="toc-text">十、透明层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十一、常见兼容"><span class="toc-number">11.</span> <span class="toc-text">十一、常见兼容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十二、表单"><span class="toc-number">12.</span> <span class="toc-text">十二、表单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十三、表格"><span class="toc-number">13.</span> <span class="toc-text">十三、表格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十四、框架、框架集"><span class="toc-number">14.</span> <span class="toc-text">十四、框架、框架集</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -403,7 +729,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2017/04/24/12/" data-title="12" data-url="http://yoursite.com/2017/04/24/12/"></div>
+    <div class="ds-thread" data-thread-key="2017/03/21/HTML-CSS/" data-title="HTML/CSS" data-url="http://yoursite.com/2017/03/21/HTML-CSS/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -426,13 +752,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/04/23/photo/" title="上一篇: photo">
+            <a href="/2017/03/21/javascript5/" title="上一篇: javascript5">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2017/04/24/hello-world/" title="下一篇: Hello World">
+            <a href="/2017/03/25/ES6/" title="下一篇: ES6">
                 <i class="fa fa-angle-right"></i>
             </a>
         
